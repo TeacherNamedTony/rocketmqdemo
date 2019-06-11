@@ -50,6 +50,9 @@ public class RocketmqdemoApplicationTests {
         producer.shutdown();
     }
     /**
+     * 接受
+     */
+    /**
      * 普通消息消费者
      * 采用的是Consumer Push的方式
      */
