@@ -24,6 +24,7 @@ public class RocketmqdemoApplicationTests {
     @Test
     public void contextLoads() {
     }
+
     /**
      * 普通消息生产者
      *
@@ -37,7 +38,7 @@ public class RocketmqdemoApplicationTests {
         // 名称服务,分号分割
         producer.setNamesrvAddr("192.168.40.205:9876;192.168.40.206:9876");
         producer.start();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             //消息实例
             Message msg = new Message("topic1" /* Topic */,
                     "TagA" /* Tag */,
@@ -49,9 +50,7 @@ public class RocketmqdemoApplicationTests {
         }
         producer.shutdown();
     }
-    /**
-     * 接受
-     */
+
     /**
      * 普通消息消费者
      * 采用的是Consumer Push的方式
